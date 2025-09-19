@@ -4,6 +4,11 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push: # only pushes to main branch will trigger this workflow
+    branches:
+      - main
+    paths-ignore: # filter out any changes to files in the .github/workflows directory
+      - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
