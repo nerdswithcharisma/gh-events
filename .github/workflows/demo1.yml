@@ -7,6 +7,7 @@ on:
   push: # only pushes to main branch will trigger this workflow
     branches:
       - main
+      - dev
     paths-ignore: # filter out any changes to files in the .github/workflows directory
       - '.github/workflows/*'
 jobs:
